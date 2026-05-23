@@ -1,0 +1,354 @@
+.dashboard-container
+{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    gap: 20px;
+    top: 18vh;
+    right: 0;
+    width: calc(100% - 320px);
+    height: calc(100vh - 18vh - 2.5rem);
+    margin-right: 320px;
+    padding: 20px;
+    overflow: auto;
+    direction: rtl;
+}
+
+.day-container
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-days
+{
+    display: inline-flex;
+    align-items: center;
+    max-width: fit-content;
+    gap: 5px;
+    padding: 8px 16px;
+    border-radius: 25px;
+    text-align: center;
+    background-color: #FFE97F;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    direction: rtl;
+}
+
+.card-days:hover
+{
+    opacity: 0.7;
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-days .material-symbols-rounded
+{
+    font-size: 22px;
+    color: #2B2B2B;
+}
+
+.card-days .day,
+.card-days .date
+{
+    font-size: 18px;
+    font-weight: 500;
+    color: #2B2B2B;
+}
+
+.courses-list
+{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card-course
+{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 20px;
+    width: 370px;
+    min-height: 180px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.card-course:hover
+{
+    transform: translateY(-4px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.course-name
+{
+    display: inline-flex;
+    position: relative;
+    gap: 5px;
+    max-width: fit-content;
+    align-self: center;
+    padding: 5px 15px;
+    border-radius: 25px;
+    align-items: center;
+    background-color: #20232D;
+    color: #FFFFFF;
+}
+
+.course-time,
+.course-teacher
+{
+    margin-top: 5px;
+    text-align: center;
+    color: #333;
+}
+
+.attendance-btn
+{
+    display: flex;
+    margin-top: 14px;
+    padding: 10px 50px;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+    background-color: #4d49bf;
+    transition: 0.7s ease-out;
+}
+
+.attendance-btn:hover
+{
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.attendance-btn .check-icon
+{
+    font-size: 22px;
+    color: white;
+}
+
+.attendance-btn.disabled
+{
+    cursor: not-allowed !important;
+    opacity: 0.6;
+}
+  
+  
+.highlight-time
+{
+    font-weight: 700;
+    color: #333;
+    font-family: "Assistant", sans-serif;
+}  
+
+.zoom-card
+{
+    background-color: #e8f4fd;
+    border-left: 4px solid #2d9cdb;
+    padding: 12px 16px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.join-link
+{
+    display: flex;
+    margin-top: 14px;
+    padding: 10px 50px;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    text-decoration: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+    background-color: #4d49bf;
+    transition: 0.7s ease-out;
+}
+
+.join-link:hover
+{
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.zoom-card-title
+{
+    background-color: #91d1fa;
+    color: #1a1a1a;
+    font-weight: bold;
+}
+
+.add-curse
+{
+    display: inline-flex;
+    position: absolute;
+    max-width: fit-content;
+    left: 20px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    color: #FFFFFF;
+    background-color: #4d49bf;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.add-curse:hover
+{
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.popup
+{
+    display: flex;
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    transition: top 0ms ease-in-out 0.3s;
+    z-index: 9999;
+}
+
+.popup.active
+{
+    top: 0;
+    pointer-events: auto;
+}
+
+.popup .overlay
+{
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.popup.active .overlay
+{
+    opacity: 1;
+}
+
+.popup .popup-content
+{
+    position: relative;
+    background: #fff;
+    width: 95%;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: scale(1.1);
+    opacity: 0;
+}
+
+.popup.active .popup-content
+{
+    transform: scale(1);
+    opacity: 1;
+}
+
+.popup .popup-content h2
+{
+    display: block;
+    max-width: fit-content;
+    margin: 0 auto 20px auto;
+    padding: 5px 15px;
+    border-radius: 25px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #FFFFFF;
+    background-color: #20232D;
+}
+
+.form-row-popup
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+    gap: 20px;
+}
+
+.form-field-popup
+{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.form-field-popup label
+{
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: right;
+    color: #20232D;
+}
+
+.form-field-popup input,
+.form-field-popup select
+{
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 14px;
+    outline: none;
+    background-color: #fff;
+    transition: border-color 0.3s;
+}
+
+.form-field-popup input:focus,
+.form-field-popup select:focus
+{
+    border-color: #0b2997;
+}
+
+.form-group-popup
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.form-group-popup button
+{
+    align-self: flex-end;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: #0b2997;
+    transition: 0.5s ease-out;
+}
+
+.form-group-popup button:hover
+{
+    filter: brightness(1.2);
+    background: rgba(15, 48, 160, 0.8);
+}

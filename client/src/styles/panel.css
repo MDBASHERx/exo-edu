@@ -1,0 +1,114 @@
+.panel-container
+{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    gap: 20px;
+    top: 18vh;  
+    right: 0;
+    width: calc(100% - 320px);
+    height: calc(100vh - 18vh - 2.5rem);
+    margin-right: 320px;
+    padding: 20px;
+    overflow: auto;
+    direction: rtl;
+}
+
+.panel-section
+{
+    padding: 25px 30px;
+    border-radius: 20px;
+    border: 1px solid #EAEAEA;
+    text-align: center;
+    background: #F7F7F9;
+}
+
+.panel-section h2
+{
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #FFFFFF;
+    background-color: #20232D;
+}
+
+.form-group-panel
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.form-row-panel
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.form-field-panel
+{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 220px;
+}
+
+.form-field-panel label
+{
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: right;
+    color: #20232D;
+}
+
+.form-field-panel input,
+.form-field-panel select
+{
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 14px;
+    outline: none;
+    background-color: #fff;
+    transition: border-color 0.3s;
+}
+
+.form-field-panel input:focus,
+.form-field-panel select:focus
+{
+    border-color: #0b2997;
+}
+
+.form-group-panel button
+{
+    align-self: flex-end;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: #0b2997;
+    transition: 0.5s ease-out;
+}
+
+.form-group-panel button:hover
+{
+    filter: brightness(1.2);
+    background: rgba(15, 48, 160, 0.8);
+}
+
+.form-message
+{
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+}

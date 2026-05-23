@@ -1,0 +1,147 @@
+.attendance-details-container
+{
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    gap: 15px;
+    top: 18vh;
+    right: 0;
+    width: calc(100% - 320px);
+    height: calc(100vh - 18vh - 2.5rem);
+    margin-right: 320px;
+    padding: 20px;
+    align-content: flex-start;
+    overflow: auto;
+    direction: rtl;
+}
+
+.no-attendance-details
+{
+    position: absolute;;
+    padding: 30px;
+    top: 6%;
+    margin-top: 90px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 12px;
+    color: #999;
+    border: 2px dashed #ccc;
+    background-color: #f9f9f9;
+}
+
+.page-title
+{
+    width: 100%;
+    text-align: center;
+}
+
+.page-title h2
+{
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #FFFFFF;
+    background-color: #20232D;
+}
+
+.back-button
+{
+    display: flex;
+    width: fit-content;
+    padding: 6px 12px;
+    gap: 8px;
+    border: 2px solid #0b2997;
+    border-radius: 8px;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+    color: #0b2997;
+    background-color: transparent;
+    transition: background 0.3s ease;
+}
+
+.back-button:hover
+{
+    color: white;
+    background-color: #0b2997;
+}
+
+.back-button .material-symbols-rounded
+{
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.attendance-table
+{
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.attendance-table th,
+.attendance-table td
+{
+    padding: 12px 16px;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: center;
+}
+
+.attendance-table th
+{
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #f5f5f5;
+}
+
+.attendance-table td
+{
+    font-weight: 600;
+}
+
+.attendance-table td.present
+{
+    font-weight: bold;
+    color: #176448;
+}
+
+.attendance-table td.late
+{
+    font-weight: bold;
+    color: #a67c00;
+}
+
+.attendance-table td.absent
+{
+    font-weight: bold;
+    color: #842029;
+}
+
+.header-actions
+{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.export-buttons
+{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-right: auto;
+    cursor: pointer;
+    color: #000;
+}
+
+.export-buttons .divider
+{
+    font-size: 18px;
+    color: #aaa;
+}

@@ -1,0 +1,52 @@
+.body404
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    background-color: #FFFFFF;
+}
+
+h1
+{
+  font-size: 90px;
+}
+
+img
+{
+  width: 500px;
+}
+
+.text h2
+{
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.text p
+{
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.home-btn
+{
+  background: #009ec5;
+  width: 200px;
+  height: 40px;
+  margin: 20px;
+  border-radius: 20px;
+  background: #0b2997;
+  color: #FFFFFF;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+
+.home-btn:hover
+{
+  background: #20232D;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}

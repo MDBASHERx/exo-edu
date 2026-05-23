@@ -1,0 +1,124 @@
+.students-container
+{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 18vh;
+    right: 0;
+    width: calc(100% - 320px);
+    height: calc(100vh - 18vh - 2.5rem);
+    margin-right: 320px;
+    padding: 20px;
+    overflow: auto;
+    direction: rtl;
+}
+
+.students-list
+{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    max-width: 500px;
+}
+
+.student-card
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    transition: all 0.7s ease;
+}
+
+.student-card:hover
+{
+    transform: translateY(-5px);
+}
+
+.student-card.highlight 
+{
+    background: #c0e5ff;
+}
+
+.student-image
+{
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+}
+
+.student-info
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+    padding-right: 10px;
+}
+
+.student-name,
+.attendance-count
+{
+    font-size: 17px;
+    font-weight: 600;
+    color: #000;
+}
+
+.student-percentage,
+.attendance-label
+{
+    font-size: 14px;
+    font-weight: 500;
+    color: #8F8996;
+}
+
+.attendance-info
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-bar
+{
+    display: flex;
+    position: relative;
+    padding: 5px;
+    width: 65%;
+    align-items: center;
+}
+  
+.search-bar input
+{
+    padding: 12px 35px;
+    font-size: 14px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    text-align: right;
+    background-color: #f8f8f8;
+}
+  
+.search-bar input::placeholder
+{
+    text-align: center;
+    font-size: 16px;
+    color: #5a5a5a;
+}
+  
+.search-bar button
+{
+    margin-top: -17px;
+    margin-right: 5px;
+    padding: 7px 30px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    background-color: #dbeaff;
+    transition: background-color 0.2s;
+}
+  
+.search-bar button:hover
+{
+    background-color: #eef5ff;
+}

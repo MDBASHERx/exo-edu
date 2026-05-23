@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+:root
+{
+    --first-color: #4D49BF;
+    --second-color: #05DBF2;
+    --body-color: #DFE9F2;
+    --title-color: #1C1C22;
+    --text-color: #58576B;
+    --body-font: 'Montserrat', sans-serif;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--body-font);
+}
+
+body
+{
+    display: flex;
+    position: relative;
+    padding: 20px;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: var(--body-color);
+}
+
+.circle
+{
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.circle.one
+{
+    width: 300px;
+    height: 300px;
+    top: -120px;
+    left: -100px;
+    background: rgba(77, 73, 191, 0.8);
+}
+
+.circle.two
+{
+    width: 280px;
+    height: 280px;
+    bottom: -130px;
+    right: -100px;
+    background: rgba(5, 219, 242, 0.7);
+}
+
+.glass-box
+{
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 1;
+}
+
+.glass-box i
+{
+    margin-bottom: 20px;
+    font-size: 60px;
+    color: var(--first-color);
+}
+
+.glass-box h2
+{
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--title-color);
+}
+
+.glass-box p
+{
+    margin-bottom: 25px;
+    line-height: 1.6;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.glass-box button
+{
+    padding: 12px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    color: white;
+    background-color: var(--first-color);
+    transition: background-color 0.3s ease;
+}
+
+.glass-box button:hover
+{
+    background-color: #372f9d;
+}
+
+@media (max-width: 480px)
+{
+    .glass-box
+    {
+        padding: 35px 20px;
+    }
+
+    .glass-box h2
+    {
+        font-size: 1.25rem;
+    }
+
+    .glass-box p
+    {
+        font-size: 0.95rem;
+    }
+
+    .glass-box button
+    {
+        padding: 10px 24px;
+        font-size: 0.95rem;
+    }
+}

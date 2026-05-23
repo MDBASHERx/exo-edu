@@ -1,0 +1,77 @@
+.attendance-container 
+{
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    gap: 15px;
+    top: 18vh;
+    right: 0;
+    width: calc(100% - 320px);
+    height: calc(100vh - 18vh - 2.5rem);
+    margin-right: 320px;
+    padding: 20px;
+    align-content: flex-start;
+    overflow: auto;
+    direction: rtl;
+}
+
+.attendance-card
+{
+    display: flex;
+    width: 370px;
+    padding: 15px;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+    color: #000;
+    background: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+}
+
+.attendance-card:hover
+{
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.subject-info,
+.attendance-count
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.subject-name,
+.count
+{
+    font-weight: bold;
+    color: #000;
+}
+
+.subject-label,
+.attendance-label
+{
+    font-weight: 500;
+    color: #8F8996;
+}
+
+.no-attendance
+{
+    padding: 30px;
+    margin-top: 40px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 12px;
+    color: #999;
+    border: 2px dashed #ccc;
+    background-color: #f9f9f9;
+}

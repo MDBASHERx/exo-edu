@@ -1,0 +1,310 @@
+/* For mobile devices (iPhone SE, 6/7/8, X, etc) */
+@media (max-width: 430px)
+{
+    .sidebar
+    {
+        top: 100px;
+        height: calc(100vh - 100px - 2.5rem);
+        width: auto;
+        z-index: 999;
+        transform: translateX(-200%);
+    }
+
+    .manualattendance-table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        border: 0;
+    }
+
+    .manualattendance-table thead {
+        display: none;
+    }
+
+    .manualattendance-table tr {
+        display: block;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 10px;
+        background-color: #fff;
+    }
+
+    .manualattendance-table td {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 12px;
+        font-size: 14px;
+        border: none;
+        border-bottom: 1px solid #eee;
+    }
+
+    .manualattendance-table td:last-child {
+        border-bottom: none;
+    }
+
+    .manualattendance-table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #333;
+    }
+
+    .footer
+    {
+        height: 1.5rem;
+    }
+
+    .sidebar.show
+    {
+        animation: fadeIn 0.5s forwards ease-in;
+    }
+
+    .sidebar.hide
+    {
+        animation: fadeOut 0.5s forwards ease-in;
+    }
+
+    @keyframes fadeIn
+    {
+        from
+        {
+            opacity: 0;
+            transform: translateX(250px);
+        }
+        to
+        {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes fadeOut
+    {
+        from
+        {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        to
+        {
+            opacity: 0;
+            transform: translateX(250px);
+        }
+    } 
+    
+    .dashboard-container,
+    .attendance-container,
+    .panel-container,
+    .students-container,
+    .attendance-details-container,
+    .zoom-container,
+    .manual-container
+    {
+        top: 100px;
+        margin-right: 0;
+        height: calc(100vh - 100px - 1.5rem);
+        width: auto;
+    }
+
+    .courses-list
+    {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card-course,
+    .student-card,
+    .attendance-card
+    {
+        width: 90vw;
+        max-width: 400px;
+    }
+
+    .search-bar
+    {
+        width: auto;
+    }
+
+    .form-row,
+    .form-row-panel,
+    .form-row-zoom,
+    .form-row-manual
+    {
+        gap: 0;
+    }
+
+    .left-section
+    {
+        display: none;
+    }
+}
+
+/* For tablets (iPad Mini, iPad Air) */
+@media (min-width: 768px) and (max-width: 1024px)
+{
+    .sidebar
+    {
+        top: 125px;
+        height: calc(100vh - 125px - 2.5rem);
+    }
+
+    .footer
+    {
+        height: 1.5rem;
+    }
+
+    .dashboard-container,
+    .attendance-container,
+    .panel-container,
+    .students-container,
+    .attendance-details-container,
+    .zoom-container,
+    .manual-container
+    {
+        top: 100px;
+        height: calc(100vh - 100px - 2.5rem);
+        width: auto;
+    }
+
+    .courses-list
+    {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card-course,
+    .student-card,
+    .attendance-card
+    {
+        width: 100vw;
+        max-width: 400px;
+    }
+
+    .search-bar
+    {
+        width: auto;
+    }
+
+    .left-section
+    {
+        display: none;
+    }
+}
+
+/* Laptops & small desktops (MacBook, 13-15 inch laptops) */
+@media (min-width: 1024px) and (max-width: 1365px)
+{
+    .sidebar
+    {
+        top: 125px;
+    }
+
+    .dashboard-container,
+    .attendance-container,
+    .panel-container,
+    .students-container,
+    .attendance-details-container,
+    .zoom-container,
+    .manual-container
+    {
+        top: 100px;
+    }
+
+    .courses-list
+    {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card-course,
+    .student-card,
+    .attendance-card
+    {
+        width: 100vw;
+        max-width: 600px;
+    }
+
+    .search-bar
+    {
+        width: 60vw;
+    }
+}
+
+/* For large laptops and HD screens */
+@media (min-width: 1440px) and (max-width: 1680px)
+{
+    .sidebar
+    {
+        top: 115px;
+    }
+
+    .dashboard-container,
+    .attendance-container,
+    .panel-container,
+    .students-container,
+    .attendance-details-container,
+    .zoom-container,
+    .manual-container
+    {
+        top: 95px;
+    }
+
+    .card-course,
+    .attendance-card
+    {
+        width: 100vw;
+        max-width: 400px;
+    }
+
+    .student-card
+    {
+        width: 100vw;
+        max-width: 600px;
+    }
+
+    .search-bar
+    {
+        width: 45vw;
+    }
+}
+
+/* Full HD and larger screens */
+@media (min-width: 1920px)
+{
+    .sidebar
+    {
+        top: 115px;
+    }
+
+    .dashboard-container,
+    .attendance-container,
+    .panel-container,
+    .students-container,
+    .attendance-details-container,
+    .zoom-container,
+    .manual-container
+    {
+        top: 95px;
+    }
+
+    .card-course,
+    .attendance-card
+    {
+        width: 100vw;
+        max-width: 400px;
+    }
+
+    .student-card
+    {
+        width: 45vw;
+        max-width: auto;
+    }
+
+    .search-bar
+    {
+        width: 45vw;
+    }
+}
